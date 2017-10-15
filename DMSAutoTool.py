@@ -11,7 +11,7 @@ classes = {
     '5층 독서실': '7'
 }
 
-classList = list(classes.keys())
+classList = ['다온실', '나온실', '가온실', '라온실', '4층 독서실', '3층 독서실', '5층 독서실']
 seatList = [
     ['13', '14', '17', '18'],
     ['1', '3', '7', '11', '15'],
@@ -111,7 +111,8 @@ if __name__ == '__main__':
 
     for i in range(len(classList)):
         for j in range(len(seatList[i])):
-            print('[~~~] ' + classList[i] + ' ' + seatList[i][j] + '번 자리 신청 시도')
+            print('[~~~] ' + classList[i] + ' ' +
+                  seatList[i][j] + '번 자리 신청 시도')
             result = reserveSeat(classList[i], seatList[i][j])
             if result == 1:
                 continue
