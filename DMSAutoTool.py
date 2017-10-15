@@ -91,14 +91,17 @@ def reserveSeat(className, seat):
                 "vertx-web.session=") + 50)] + ' : 시도 ' + str(counter) + '회 초과로 종료합니다.')
             return -1
         else:
-            print('[~~~] ' + cookie[(cookie.find("vertx-web.session=") + 18)
-                  :(cookie.find("vertx-web.session=") + 50)] + ' : 5초 후 다시 시도...')
+            print('[~~~] ' + cookie[(cookie.find("vertx-web.session=") + 18)                                    :(cookie.find("vertx-web.session=") + 50)] + ' : 5초 후 다시 시도...')
             time.sleep(5)
 
 
 if __name__ == '__main__':
     counter = 0
+    now = time.localtime()
 
+    print('---------- START AUTO RESERVE SEAT ----------')
+    print("------ %04d년 %02d월 %02d일 %02d시 %02d분 %02d초 ------" % (now.tm_year, now.tm_mon,
+                                                                 now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec))
     getSession()
     while login('infreljs', '20412') == False:
         counter += 1
