@@ -92,7 +92,7 @@ def reserveSeat(className, seat):
               className + ' ' + seat + '번 자리 신청 실패!')
         return
     else:
-        print('[ERR] ' + ' : 오류 발생! ' +
+        print('[ERR] ' + ' : 오류 발생! [' + response.status_code + ' ' + response.text + '] ' +
               className + ' ' + seat + '번 자리 신청 실패!')
         return
 
