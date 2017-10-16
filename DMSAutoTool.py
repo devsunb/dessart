@@ -101,6 +101,7 @@ def autoReserveSeat(id, pw, class_, seat):
 
     print('[~~~] ' + class_ + ' ' + seat + '번 자리 신청 시도')
     result = reserveSeat(id, class_, seat)
+    print('---------- END AUTO RESERVE SEAT ----------\n')
     exit()
 
 
