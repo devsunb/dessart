@@ -52,7 +52,7 @@ def reserveSeat(id, class_, seat, t):
 
     # Reserve Seat
     while True:
-        url = "http://dsm2015.cafe24.com/apply/extension" + t
+        url = "http://dsm2015.cafe24.com/apply/extension/" + t
         payload = {'class': classes[class_], 'seat': seat}
         headers = {
             'User-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36', 'cookie': cookie}
@@ -75,10 +75,10 @@ def reserveSeat(id, class_, seat, t):
 
         counter += 1
         if counter >= 15:
-            print('[FIN] ' + id + ' : 시도 ' + str(counter) + '회 초과로 종료합니다.')
+            print('[FIN] ' + t + '시 (' + id + ') : 시도 ' + str(counter) + '회 초과로 종료합니다.')
             return -1
         else:
-            print('[~~~] ' + id + ' : 5초 후 다시 시도...')
+            print('[~~~] ' + t + '시 (' + id + ') : 5초 후 다시 시도...')
             time.sleep(5)
 
 
@@ -99,7 +99,7 @@ def autoReserveSeat(id, pw, class_, seat, t):
             print('[ERR] 로그인 실패!!! 5초 후 다시 시도...')
             time.sleep(5)
 
-    print('[~~~] ' + class_ + ' ' + seat + '번 자리 신청 시도')
+    print('[~~~] ' + t + '시 ' + class_ + ' ' + seat + '번 자리 신청 시도')
     result = reserveSeat(id, class_, seat, t)
     print('---------- END AUTO RESERVE SEAT ----------\n')
     exit()
