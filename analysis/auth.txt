@@ -1,0 +1,21 @@
+POST /auth HTTP/1.1
+Host: dsm2015.cafe24.com
+Content-Length: 234
+Accept: application/json, text/plain, */*
+Origin: http://dsm2015.cafe24.com
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary8tXB2XqaIoTX4BD8
+Referer: http://dsm2015.cafe24.com/
+Accept-Encoding: gzip, deflate
+Accept-Language: ko,en-US;q=0.9,en;q=0.8,ja;q=0.7
+Connection: close
+
+------WebKitFormBoundary8tXB2XqaIoTX4BD8
+Content-Disposition: form-data; name="id"
+
+neiwiso
+------WebKitFormBoundary8tXB2XqaIoTX4BD8
+Content-Disposition: form-data; name="pw"
+
+30411
+------WebKitFormBoundary8tXB2XqaIoTX4BD8--
