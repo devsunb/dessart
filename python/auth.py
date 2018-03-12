@@ -11,5 +11,6 @@ def auth(user):
                              files=payload, headers=headers)
     if response.status_code == 200:
         access_token = response.json()['access_token']
-        print('[+] 로그인 성공 : ' + user['id'])
         return access_token
+    else:
+        return False

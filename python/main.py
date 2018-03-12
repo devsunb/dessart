@@ -33,6 +33,7 @@ def main():
         access_token = auth.auth({'id': user_id, 'pw': user_pw})
         counter += 1
 
+    print('[+] 로그인 성공 : ' + user['id'])
     print('[ ] (' + user_id + ') ' + t + '시 ' +
           class_num + ' ' + seat_num + '번 자리 신청 시도')
 
