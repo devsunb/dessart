@@ -10,7 +10,7 @@ def eleven(access_token, class_num, seat_num):
                'seat_num': (None, str(seat_num))}
     response = requests.post(config.URL_DMS + config.URL_EXTENTION_11,
                              files=payload, headers=headers)
-    if response.status_code == 200:
+    if response.status_code == 201:
         return True
     else:
         return False
@@ -24,7 +24,7 @@ def twelve(access_token, class_num, seat_num):
                'seat_num': (None, str(seat_num))}
     response = requests.post(config.URL_DMS + config.URL_EXTENTION_12,
                              files=payload, headers=headers)
-    if response.status_code == 200:
+    if response.status_code == 201:
         return True
     else:
         return False
