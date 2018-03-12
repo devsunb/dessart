@@ -5,10 +5,6 @@ import extension
 
 
 def main():
-    now = time.localtime()
-    print("------ %04d년 %02d월 %02d일 %02d시 %02d분 %02d초 ------" % (now.tm_year, now.tm_mon,
-                                                                 now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec))
-
     try:
         user_id = sys.argv[sys.argv.index('-u') + 1]
         user_pw = sys.argv[sys.argv.index('-p') + 1]
@@ -20,6 +16,10 @@ def main():
         print('Usage : ' + sys.argv[0] +
               ' -u (id) -p (password) -c (class) -s (seat) -t (time)')
         exit()
+
+    now = time.localtime()
+    print("------ %04d년 %02d월 %02d일 %02d시 %02d분 %02d초 ------" % (now.tm_year, now.tm_mon,
+                                                                 now.tm_mday, now.tm_hour, now.tm_min, now.tm_sec))
 
     access_token = auth.auth({'id': user_id, 'pw': user_pw})
     counter = 1
