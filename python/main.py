@@ -47,6 +47,8 @@ def main():
                 print('[!] 연장 신청 실패!!! 5초 후 다시 시도...')
                 time.sleep(5)
             counter += 1
+        if counter < 15:
+            print('[+] 연장 신청 성공')
     elif t == '12':
         counter = 1
         while extension.twelve(access_token, class_num, seat_num) == False:
@@ -57,6 +59,8 @@ def main():
                 print('[!] 연장 신청 실패!!! 5초 후 다시 시도...')
                 time.sleep(5)
             counter += 1
+        if counter < 15:
+            print('[+] 연장 신청 성공')
 
     print('---------- END ----------\n')
     exit()
